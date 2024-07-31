@@ -1,0 +1,10 @@
+ find ./ \( -iwholename "*.eml" -o -iwholename "*.wab" -o -iwholename "*.pst" -o -iwholename "*.dbx*" -o -iwholename "*.doc" -o -iwholename "*.docx" -o -iwholename "*.xls" \)  > /media/disco/casanoutput/barcley_filetrovati.txt
+
+mount -t vfat -o ro,noatime,noauto,noexec,offset=4194304 fujifilm.dd /media/fujifilm
+
+gioge@PCgiovanni:/media/WINDOWS/casano$ find /media/barcley \( -iwholename "*.eml" -o -iwholename "*.wab" -o -iwholename "*.pst" -o -iwholename "*.dbx*" -o -iwholename "*.doc" -o -iwholename "*.docx" -o -iwholename "*.xls" \) -exec cp -R --parents {} /media/WINDOWS/casanoutput/barcley/doc \;
+
+gioge@PCgiovanni:/media/WINDOWS/casano$ find /media/barcley \( -iwholename "*.eml" -o -iwholename "*.wab" -o -iwholename "*.pst" -o -iwholename "*.dbx*" -o -iwholename "*.doc" -o -iwholename "*.docx" -o -iwholename "*.xls" \) | wc -l
+140
+gioge@PCgiovanni:/media/WINDOWS/casano$ find /media/WINDOWS/casanoutput/barcley/ \( -iwholename "*.eml" -o -iwholename "*.wab" -o -iwholename "*.pst" -o -iwholename "*.dbx*" -o -iwholename "*.doc" -o -iwholename "*.docx" -o -iwholename "*.xls" \) | wc -l
+
